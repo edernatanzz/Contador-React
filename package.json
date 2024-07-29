@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/react": "^18.3.3",
     "styled-components": "^6.1.12"
   }
 }
