@@ -10,7 +10,6 @@
 
 body{
   background-image: var(--background-image);
-  background-repeat: no-repeat; 
+  background-repeat: initial; 
   background-size: cover;
- 
 }
