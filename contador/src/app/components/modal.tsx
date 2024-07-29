@@ -1,5 +1,7 @@
 'use client';
 import styled from 'styled-components';
+import Logicatrue from './logica';
+import Counter from './counter';
 
 const Container = styled.div`
   width: 100%;
@@ -23,12 +25,19 @@ const Text = styled.div`
 `
 
 export function Modal() {
+  const dateString = "July 29, 2024 23:59:00";
+  const timestamp = new Date(dateString).getTime();
+  const [day, hour, minute, second] = Logicatrue(timestamp);
+
   return (
     <Container>
       <Conteudo>
         <Text>
             <h1>Contagem regressiva</h1>
-            dias, horas , minutos, segundos
+            <Counter title="Dias" number={day}/>
+            <Counter title="Horas" number={hour}/>
+            <Counter title="Minutos" number={minute}/>
+            <Counter title="Segundos" number={second}/>
         </Text>
       </Conteudo>
     </Container>
